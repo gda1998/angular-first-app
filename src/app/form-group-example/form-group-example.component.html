@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row g-3">
+
+        <div class="col-md-12">
+            <form [formGroup]="formGroup">
+                <label>User FormGroup: </label>
+                <span>{{ user }}</span>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        formControlName="name"
+                    />
+                    <button 
+                        type="button" 
+                        class="btn btn-success"
+                        (click)="clickMe()"
+                    >
+                        Click FormGroup
+                    </button>
+                </div><!-- /.input-group -->
+            </form>
+        </div><!-- /.col-md-12 -->
+
+    </div><!-- /.row g-3 -->
+</div><!-- /.container -->
+<hr />
+

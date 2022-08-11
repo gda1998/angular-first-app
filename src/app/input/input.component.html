@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row g-3">
+
+        <div class="col-md-4">
+            <label>User NgModel: </label>
+            <span>{{ userNgModel }}</span>
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="userNgModel" />
+                <button type="button" class="btn btn-success" (click)="clickMeNgModel()">
+                    Click NgModel
+                </button>
+            </div><!-- /.input-group -->
+        </div><!-- /.col-md-4 -->
+
+        <div class="col-md-4">
+            <label>User Local Reference: </label>
+            <span>{{ username.value }}</span>
+            <!-- El hashtag guarda la referencia del input text como HTMLInputElement -->
+            <input type="text" class="form-control" #username (keyup)="0" [disabled]="disabledProp" />
+        </div><!-- /.col-md-4 -->
+
+        <div class="col-md-4">
+            <div class="form-check">
+                <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    (change)="printCheckboxValue($event)" 
+                    [checked]="checkedProp" 
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                    Is registered?
+                </label>
+            </div>
+            <button class="btn btn-success" (click)="toogleCheckbox()" >Toogle Checkbox</button>
+        </div><!-- /.col-md-4 -->
+
+    </div><!-- /.row g-3 -->
+</div><!-- /.container -->
+<hr />
